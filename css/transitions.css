@@ -1,0 +1,25 @@
+.page-enter { animation: page-arrive .65s cubic-bezier(.2,.7,.2,1) both; }
+.transition-curtain { position: fixed; z-index: 25; inset: 0; background: radial-gradient(ellipse at 50% 110%, #0c6070, #062640 45%, #020b1a 78%); clip-path: ellipse(0 0 at 50% 100%); pointer-events: none; }
+.transition-curtain.curtain-in { animation: wave-cover .48s cubic-bezier(.65,0,.4,1) forwards; }
+.transition-curtain.curtain-out { animation: wave-reveal .58s cubic-bezier(.2,.7,.2,1) forwards; }
+.detail-dash .detail-fish { animation: fish-dash .75s cubic-bezier(.16,.7,.22,1); }
+.detail-dash .detail-aura { animation: aura-burst .7s ease-out; }
+
+@keyframes page-arrive { from { opacity: .25; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes wave-cover { to { clip-path: ellipse(150% 120% at 50% 100%); } }
+@keyframes wave-reveal { from { clip-path: ellipse(150% 120% at 50% 100%); } to { clip-path: ellipse(0 0 at 50% 100%); } }
+@keyframes fish-dash { 35% { transform: translate3d(16px,-8px,0) scale(1.09) rotate(5deg); filter: drop-shadow(0 0 45px var(--fish-glow)); } 100% { transform: translate3d(0,0,0); } }
+@keyframes aura-burst { 50% { opacity: .32; transform: scale(1.4); } }
+
+::view-transition-old(root) { animation: 350ms ease both view-fade-out; }
+::view-transition-new(root) { animation: 850ms cubic-bezier(.2,.7,.2,1) both view-fade-in; }
+::view-transition-group(fish-art) { z-index: 3; }
+::view-transition-old(fish-art), ::view-transition-new(fish-art) { height: 100%; object-fit: contain; }
+@keyframes view-fade-out { to { opacity: .3; filter: blur(4px); } }
+@keyframes view-fade-in { from { opacity: .35; filter: blur(4px); clip-path: ellipse(0 0 at 50% 100%); } to { opacity: 1; filter: blur(0); clip-path: ellipse(150% 120% at 50% 100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter, .fish-card { animation: none; }
+  .transition-curtain { display: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}

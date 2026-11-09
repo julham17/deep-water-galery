@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Siluet bioluminescent lanternfish</title>
+  <defs><linearGradient id="body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#164354"/><stop offset=".6" stop-color="#092033"/><stop offset="1" stop-color="#030c19"/></linearGradient><radialGradient id="glow"><stop stop-color="#4df3ff" stop-opacity=".7"/><stop offset="1" stop-color="#4df3ff" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="342" cy="184" rx="187" ry="91" fill="url(#glow)"/>
+  <path d="M83 205c42-71 151-110 277-99 103 9 180 46 247 97-62 62-149 93-262 92-116-1-211-30-262-90Z" fill="url(#body)" stroke="#4df3ff" stroke-opacity=".7" stroke-width="3"/>
+  <path d="M83 205 22 141l16 66-20 64 77-42" fill="#081827" stroke="#4df3ff" stroke-opacity=".55" stroke-width="3"/>
+  <path d="m209 133 33-56 27 58m110-25 46-50-9 63m-143 151 32 41 27-43" fill="#0b2535" stroke="#4df3ff" stroke-opacity=".57" stroke-width="3"/>
+  <path d="M118 207c96-43 240-48 411-8" fill="none" stroke="#4df3ff" stroke-opacity=".31" stroke-width="3"/>
+  <g fill="#4df3ff"><circle cx="190" cy="231" r="6"/><circle cx="231" cy="245" r="5"/><circle cx="273" cy="255" r="6"/><circle cx="316" cy="260" r="5"/><circle cx="359" cy="258" r="6"/><circle cx="402" cy="250" r="5"/><circle cx="444" cy="238" r="6"/></g>
+  <g fill="#4df3ff" opacity=".24"><circle cx="190" cy="231" r="17"/><circle cx="273" cy="255" r="17"/><circle cx="359" cy="258" r="17"/><circle cx="444" cy="238" r="17"/></g>
+  <circle cx="479" cy="177" r="8" fill="#4df3ff"/><circle cx="481" cy="175" r="2.5" fill="#eaffff"/>
+  <path d="M494 205c24 1 39-1 54-8" fill="none" stroke="#4df3ff" stroke-width="2"/>
+</svg>

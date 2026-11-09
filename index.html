@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jelajahi penghuni misterius laut dalam melalui galeri interaktif dan ilustrasi bioluminescent.">
+    <meta name="theme-color" content="#020b1a">
+    <title>Deep Water Galery — Penghuni Kegelapan Samudra</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%90%9F%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/transitions.css">
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="ocean-effects" aria-hidden="true">
+      <div class="light-rays"></div>
+      <div class="marine-snow" id="marine-snow"></div>
+      <div class="ocean-bubbles" id="ocean-bubbles"></div>
+    </div>
+    <a class="skip-link" href="#main-content">Lewati ke konten</a>
+    <header class="site-header">
+      <a class="brand" href="#/" aria-label="Deep Water Galery, beranda">
+        <span class="brand-mark" aria-hidden="true">◉</span><span>DEEP WATER <b>GALERY</b></span>
+      </a>
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="#/" data-nav="home">Beranda</a>
+        <a href="#/gallery" data-nav="gallery">Galeri</a>
+        <a href="#/about" data-nav="about">Tentang</a>
+      </nav>
+      <div class="header-depth"><span class="depth-dot"></span><span id="header-depth">000 m</span></div>
+    </header>
+    <main id="main-content" tabindex="-1"></main>
+    <footer class="site-footer">
+      <span>DEEP WATER GALERY</span><span>Keajaiban hidup di bawah cahaya.</span>
+      <a href="#/about">Tentang ekspedisi <span aria-hidden="true">↗</span></a>
+    </footer>
+    <div class="cursor-fish" id="cursor-fish" aria-hidden="true">
+      <svg viewBox="0 0 96 48" role="presentation"><path class="cursor-tail" d="M25 24 6 8l4 16-4 16z"/><path class="cursor-body" d="M22 24C35 7 62 8 77 23c-13 17-40 18-55 1Z"/><path class="cursor-fin" d="m43 12 9-9 5 11m-14 21 9 10 5-12"/><circle cx="67" cy="20" r="2.4"/></svg>
+    </div>
+    <div class="transition-curtain" aria-hidden="true"></div>
+    <div class="touch-ripples" id="touch-ripples" aria-hidden="true"></div>
+  </body>
+</html>

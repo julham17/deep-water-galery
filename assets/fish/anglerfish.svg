@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Siluet bioluminescent ikan pemancing</title>
+  <defs>
+    <linearGradient id="body" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#15384a"/><stop offset=".55" stop-color="#071829"/><stop offset="1" stop-color="#030c18"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#4df3ff" stop-opacity=".85"/><stop offset="1" stop-color="#4df3ff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="432" cy="106" rx="53" ry="48" fill="url(#glow)"/>
+  <path d="M92 205c65-100 228-130 367-77 42 16 77 48 101 78-63 87-164 127-291 113-76-9-143-47-177-114Z" fill="url(#body)" stroke="#4df3ff" stroke-opacity=".62" stroke-width="3"/>
+  <path d="M92 205 23 126l18 80-21 73 83-55" fill="#071624" stroke="#4df3ff" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M247 116c15-46 18-88 4-113 42 21 68 60 63 111" fill="#0b2637" stroke="#4df3ff" stroke-opacity=".65" stroke-width="3"/>
+  <path d="M351 298c16 34 46 47 74 47-24-20-32-43-28-67" fill="#0b2637" stroke="#4df3ff" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M409 141c10-64 8-97 32-115 20-15 33 4 25 25" fill="none" stroke="#4df3ff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="467" cy="48" r="13" fill="#4df3ff"/><circle cx="467" cy="48" r="29" fill="url(#glow)"/>
+  <path d="m457 217 18 2m-13 12 20 2m-17 11 19 1m-15 12 18 1" stroke="#bafcff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="470" cy="177" r="7" fill="#4df3ff"/><circle cx="472" cy="175" r="2" fill="#eaffff"/>
+  <path d="M144 203c83-35 178-49 280-45" fill="none" stroke="#4df3ff" stroke-opacity=".24" stroke-width="2"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Siluet hiu goblin dengan moncong panjang</title>
+  <defs><linearGradient id="body" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4d3349"/><stop offset=".48" stop-color="#202033"/><stop offset="1" stop-color="#090e1b"/></linearGradient><radialGradient id="glow"><stop stop-color="#ff86b5" stop-opacity=".58"/><stop offset="1" stop-color="#ff86b5" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="333" cy="184" rx="204" ry="93" fill="url(#glow)"/>
+  <path d="M56 202c84-49 189-77 316-73 87 3 151 31 208 74-58 47-134 80-230 91-116 14-211-19-294-92Z" fill="url(#body)" stroke="#ff86b5" stroke-opacity=".65" stroke-width="3"/>
+  <path d="M57 202 9 179l46 33-41 13 74-2" fill="#542d48" stroke="#ff86b5" stroke-width="3"/>
+  <path d="m252 139 43-82 38 77m111-16 51-38-10 57m-164 148 24 50 42-49" fill="#281b2d" stroke="#ff86b5" stroke-opacity=".56" stroke-width="3"/>
+  <path d="M482 155c41 3 77 17 105 43-30 16-65 22-105 19l-66-12 67-20Z" fill="#6b354f" stroke="#ff86b5" stroke-width="3"/>
+  <path d="M419 205c54 8 110 8 171-7-37 33-83 47-138 40l-61-18" fill="#231829" stroke="#ff86b5" stroke-width="3"/>
+  <path d="m473 205 21 8m1-12 20 8m1-11 20 7m-45 9 19 9m2-11 20 8" stroke="#ffe0eb" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="430" cy="166" r="7" fill="#ff86b5"/><circle cx="432" cy="164" r="2" fill="#fff"/>
+  <path d="M128 209c117-27 227-28 340-14" fill="none" stroke="#ff86b5" stroke-opacity=".25" stroke-width="3"/>
+</svg>

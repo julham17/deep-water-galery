@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Siluet ikan mata tong dengan kepala transparan</title>
+  <defs><linearGradient id="body" x2=".8" y2="1"><stop stop-color="#164550"/><stop offset=".55" stop-color="#092331"/><stop offset="1" stop-color="#04101d"/></linearGradient><radialGradient id="glow"><stop stop-color="#8ae9ff" stop-opacity=".65"/><stop offset="1" stop-color="#8ae9ff" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="335" cy="157" rx="166" ry="101" fill="url(#glow)"/>
+  <path d="M82 220c49-65 154-98 272-83 87 11 151 42 210 88-64 57-153 84-261 76-101-7-176-36-221-81Z" fill="url(#body)" stroke="#8ae9ff" stroke-opacity=".65" stroke-width="3"/>
+  <path d="M82 220 23 160l14 62-22 61 74-38" fill="#071725" stroke="#8ae9ff" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M249 139c-12-43 1-82 40-105 52-31 126-11 157 39 15 24 18 51 9 75" fill="#72d8df" fill-opacity=".08" stroke="#a9f6ff" stroke-opacity=".8" stroke-width="3"/>
+  <path d="M268 130c-2-25 3-44 15-55 13-11 31-7 36 7 4 13-4 30-18 47m43-7c-1-29 5-50 19-62 12-10 29-5 32 8 3 15-9 37-24 55" fill="#8ae9ff" fill-opacity=".24" stroke="#8ae9ff" stroke-width="5"/>
+  <circle cx="295" cy="77" r="6" fill="#eaffff"/><circle cx="376" cy="76" r="6" fill="#eaffff"/>
+  <path d="M191 241c90-32 201-31 301 5" fill="none" stroke="#8ae9ff" stroke-opacity=".3" stroke-width="3"/>
+  <circle cx="446" cy="202" r="7" fill="#8ae9ff"/><path d="m465 218 48 8" stroke="#8ae9ff" stroke-opacity=".55" stroke-width="2"/>
+</svg>

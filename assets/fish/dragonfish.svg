@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Siluet bioluminescent dragonfish</title>
+  <defs><linearGradient id="body" x2="1" y2=".5"><stop stop-color="#331c37"/><stop offset=".55" stop-color="#151426"/><stop offset="1" stop-color="#050a17"/></linearGradient><radialGradient id="glow"><stop stop-color="#ff4d85" stop-opacity=".66"/><stop offset="1" stop-color="#ff4d85" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="356" cy="194" rx="205" ry="88" fill="url(#glow)"/>
+  <path d="M69 203c83-60 206-91 355-73 77 9 140 38 181 73-64 52-154 84-269 83-115-1-211-29-267-83Z" fill="url(#body)" stroke="#ff4d85" stroke-opacity=".66" stroke-width="3"/>
+  <path d="M69 203 14 133l14 69-18 67 72-39" fill="#101321" stroke="#ff4d85" stroke-opacity=".55" stroke-width="3"/>
+  <path d="m199 151 44-70 19 65m154-10 62-49-23 64m-113 138 43 43 22-46" fill="#171629" stroke="#ff4d85" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M480 204c30-12 68-10 112 6-42 27-82 36-118 26" fill="#080d18" stroke="#ff4d85" stroke-width="3"/>
+  <path d="m493 215 29 4-20 16 38-9" fill="none" stroke="#ffd8e4" stroke-width="3"/>
+  <circle cx="485" cy="177" r="8" fill="#ff4d85"/><circle cx="487" cy="175" r="2.5" fill="#fff"/>
+  <path d="M109 205c109-39 239-51 363-26" fill="none" stroke="#ff4d85" stroke-opacity=".24" stroke-width="3"/>
+  <g fill="#ff4d85"><circle cx="211" cy="250" r="6"/><circle cx="263" cy="260" r="4"/><circle cx="318" cy="264" r="6"/><circle cx="370" cy="260" r="4"/><circle cx="420" cy="250" r="5"/></g>
+  <path d="M390 140c24-44 45-56 68-57" fill="none" stroke="#ff4d85" stroke-width="3"/><circle cx="460" cy="82" r="7" fill="#ff4d85"/>
+</svg>

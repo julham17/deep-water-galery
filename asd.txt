@@ -1,0 +1,130 @@
+# PROMPT: Website Galeri Ikan Laut Dalam (Frontend Only)
+
+Kamu adalah senior front-end developer dan creative coder. Buatkan website galeri ikan laut dalam yang interaktif, bernuansa bawah laut, **frontend saja tanpa backend**. Hasil akhir harus bisa langsung dibuka lewat `index.html` dan bisa dideploy ke GitHub Pages.
+
+## 1. Tech Stack
+- HTML5, CSS3, dan JavaScript vanilla (ES Modules). **Tanpa framework dan tanpa backend.**
+- Library opsional via CDN dengan versi dipin: GSAP 3.12.5 (untuk animasi dan transisi). Jika memungkinkan, gunakan vanilla saja.
+- Semua data ikan disimpan di satu file `data/fishes.js` (array of object), bukan database.
+- Semua gambar ikan dibuat sebagai **SVG inline/file `.svg` buatan sendiri** (bergaya siluet bioluminescent) agar tidak bergantung pada aset eksternal.
+- Font: Google Fonts (contoh: "Cinzel" untuk judul, "Inter" untuk teks) dengan fallback.
+
+## 2. Struktur Folder (root repo = `deep-water-galery`)
+Repo GitHub: https://github.com/julham17/deep-water-galery
+Situs live (GitHub Pages): https://julham17.github.io/deep-water-galery/
+
+```
+deep-water-galery/
+├── index.html
+├── .nojekyll
+├── css/
+│   ├── base.css
+│   ├── layout.css
+│   ├── components.css
+│   └── transitions.css
+├── js/
+│   ├── main.js
+│   ├── router.js
+│   ├── cursorFish.js
+│   ├── ocean.js
+│   ├── transitions.js
+│   └── pages.js
+├── data/
+│   └── fishes.js
+├── assets/
+│   └── fish/
+└── README.md   (timpa README yang sudah ada)
+```
+
+## 3. Fitur Utama
+
+### 3.1 Kursor = Ikan yang Bergerak
+- Kursor bawaan disembunyikan (`cursor: none`) di desktop.
+- Ganti dengan **elemen ikan kecil (SVG)** yang mengikuti posisi mouse dengan gerakan halus (lerp/easing, bukan kaku).
+- Ikan **berputar menghadap arah gerak** (hitung sudut dari vektor kecepatan) dan **menyesuaikan orientasi** (flip horizontal jika bergerak ke kiri).
+- Ekor ikan bergoyang (animasi ringan) dan makin cepat saat kursor bergerak cepat.
+- Meninggalkan jejak gelembung kecil saat bergerak.
+- **Saat diklik:** ikan melesat/dash cepat ke depan, membesar sebentar, mengeluarkan semburan gelembung, lalu kembali normal.
+- Saat hover di elemen interaktif (link, tombol, kartu): ikan membesar dan bersinar.
+- Di perangkat touch/mobile: nonaktifkan kursor ikan, gunakan efek riak dan gelembung di titik sentuhan.
+- Hormati `prefers-reduced-motion`: kurangi atau matikan animasi berat.
+
+### 3.2 Halaman (SPA dengan hash routing, tanpa reload)
+1. **Home (`#/`)**: hero dengan judul "Penghuni Kegelapan Samudra", subjudul singkat, tombol "Mulai Menyelam". Ada indikator kedalaman yang berubah saat scroll (0 m → 4.000 m).
+2. **Galeri (`#/gallery`)**: grid kartu ikan (gambar, nama, kedalaman habitat). Ada filter berdasarkan zona kedalaman (Mesopelagik, Batipelagik, Abisopelagik) dan kolom pencarian. Filter dan pencarian dinamis tanpa reload.
+3. **Detail Ikan (`#/fish/:id`)**: layout **dua kolom**: gambar ikan di **sebelah** deskripsi.
+   - Gambar ikan **bergerak mengikuti kursor** (parallax dan tilt 3D halus, sedikit berputar mengikuti arah mouse).
+   - Efek glow bioluminescent yang ikut bergerak.
+   - Klik pada ikan besar memicu animasi berenang/dash dan gelembung.
+   - Deskripsi mencakup: nama umum, nama ilmiah, kedalaman, ukuran, makanan, adaptasi unik, dan fakta menarik.
+   - Tombol "Ikan Sebelumnya / Berikutnya" dan "Kembali ke Galeri".
+4. **Tentang (`#/about`)**: penjelasan singkat tentang zona laut dalam dan kondisi ekstrem (gelap, tekanan tinggi, dingin).
+
+### 3.3 Transisi Halaman yang Keren
+- Gunakan **View Transitions API** (`document.startViewTransition`) bila didukung, dengan **fallback GSAP/CSS** bila tidak.
+- Efek transisi: **gelombang air naik menutupi layar** + semburan gelembung besar, lalu air surut menampilkan halaman baru (clip-path atau SVG wave morph).
+- Saat membuka detail ikan dari galeri: gambar ikan di kartu **bermorph/berpindah mulus** ke posisi gambar di halaman detail (shared element transition).
+- Durasi 0,8–1,2 detik, easing halus, tidak mengganggu performa.
+- Teks dan elemen halaman baru muncul dengan stagger (fade + naik).
+
+### 3.4 Tema Bawah Laut
+- Palet warna: biru tua `#020B1A`, `#04152E`, teal `#0A3D4F`, aksen bioluminescent cyan `#4DF3FF`, hijau neon `#7CFFB2`, magenta `#FF4DD2`.
+- Background gradient vertikal yang **semakin gelap seiring scroll** (simulasi kedalaman).
+- Layer efek (canvas atau CSS): sinar cahaya dari permukaan (light rays), gelembung naik, partikel "marine snow" yang melayang pelan, dan titik cahaya bioluminescent berkedip.
+- Kartu bergaya glassmorphism gelap dengan border glow tipis; efek glow saat hover.
+- Tipografi elegan dengan kontras tinggi dan mudah dibaca.
+
+## 4. Data Ikan (minimal 8 ikan, tulis deskripsi dalam Bahasa Indonesia)
+Skema tiap objek:
+```js
+{
+  id: "anglerfish",
+  name: "Ikan Pemancing (Anglerfish)",
+  scientific: "Melanocetus johnsonii",
+  zone: "Batipelagik",
+  depth: "200 – 2.000 m",
+  size: "± 18 cm (betina)",
+  diet: "Ikan kecil dan krustasea",
+  description: "...",
+  adaptations: ["...", "..."],
+  funFact: "...",
+  image: "assets/fish/anglerfish.svg",
+  glowColor: "#4DF3FF"
+}
+```
+Daftar ikan:
+1. Anglerfish (Ikan Pemancing)
+2. Viperfish
+3. Gulper Eel (Belut Pelikan)
+4. Fangtooth
+5. Barreleye (Ikan Mata Tong)
+6. Dragonfish
+7. Goblin Shark
+8. Lanternfish
+(Opsional: Blobfish, Frilled Shark, Hatchetfish)
+
+Pastikan fakta akurat secara ilmiah.
+
+## 5. Kualitas dan Aksesibilitas
+- Responsif (mobile, tablet, desktop).
+- Semantik HTML, atribut `alt`, label ARIA pada navigasi, fokus keyboard terlihat jelas, kontras warna memadai.
+- Kursor ikan tidak boleh menghalangi klik (`pointer-events: none`).
+- Gunakan `requestAnimationFrame` dan `transform`/`opacity` untuk animasi agar 60 fps; pause animasi saat tab tidak aktif.
+- Kode bersih, modular, diberi komentar berbahasa Indonesia yang singkat.
+- Tidak ada `localStorage`/API eksternal yang wajib; semua statis.
+
+## 6. Aturan Wajib untuk GitHub Pages (subpath)
+Situs akan dibuka di `https://julham17.github.io/deep-water-galery/` (bukan di root domain), jadi:
+- **Semua path aset HARUS relatif**: gunakan `./css/base.css`, `./assets/fish/anglerfish.svg`. **Dilarang** memakai path absolut berawalan `/`.
+- Jangan pakai `<base href="/">`.
+- Routing memakai **hash** (`#/gallery`, `#/fish/anglerfish`) supaya tidak error 404 saat refresh di GitHub Pages. Jangan pakai `history.pushState` dengan path asli.
+- Gambar yang di-load lewat JS (`fishes.js`, CSS `url()`) juga harus relatif terhadap lokasi file yang memuatnya, dan sudah dicek jalan di subpath.
+- Sertakan file kosong `.nojekyll` di root.
+- Tambahkan `<title>`, `<meta name="description">`, `<meta name="viewport">`, dan favicon emoji/SVG inline (🐟) di `index.html`.
+
+## 7. Deliverables
+1. Seluruh file sesuai struktur folder di atas, lengkap dan siap jalan.
+2. `README.md` (menggantikan README kosong di repo) berisi: judul "Deep Water Galery", deskripsi, fitur, link live demo `https://julham17.github.io/deep-water-galery/`, cara menjalankan lokal (`npx serve`), struktur folder, cara menambah ikan di `data/fishes.js`, dan langkah deploy ke GitHub Pages.
+3. Setelah selesai, berikan ringkasan singkat apa yang dibuat dan asumsi yang diambil.
+
+Kerjakan langsung dan lengkap, jangan hanya memberi kerangka.

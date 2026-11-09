@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Siluet bioluminescent belut pelikan</title>
+  <defs><linearGradient id="body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#3b193d"/><stop offset=".45" stop-color="#17152d"/><stop offset="1" stop-color="#060c1b"/></linearGradient><radialGradient id="glow"><stop stop-color="#ff4dd2" stop-opacity=".65"/><stop offset="1" stop-color="#ff4dd2" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="442" cy="178" rx="112" ry="92" fill="url(#glow)"/>
+  <path d="M78 229c82-19 147-65 210-111 67-48 141-66 202-48 44 14 67 46 70 86 3 37-19 58-54 70-67 23-129-1-190-31-59-29-124 3-174 54-22 22-44 37-70 31-23-6-21-34 6-51Z" fill="url(#body)" stroke="#ff4dd2" stroke-opacity=".7" stroke-width="3"/>
+  <path d="M510 72c50 7 82 32 90 72-51-7-84-5-123 10-10-37 1-65 33-82Z" fill="#0b1425" stroke="#ff4dd2" stroke-width="3"/>
+  <path d="M501 159c38 28 75 35 113 24-19 36-54 57-95 54-26-2-53-16-75-40Z" fill="#100f24" stroke="#ff4dd2" stroke-width="3"/>
+  <path d="M107 247c-30 30-45 54-74 67 35 1 77-11 110-44" fill="none" stroke="#ff4dd2" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="540" cy="123" r="7" fill="#ffb5eb"/><path d="M520 116h-27" stroke="#ff4dd2" stroke-width="2"/>
+  <path d="M236 145c84-58 158-79 229-75m-185 120c72-37 139-35 202-13" fill="none" stroke="#ff4dd2" stroke-opacity=".28" stroke-width="3"/>
+  <circle cx="121" cy="267" r="7" fill="#ff4dd2"/><circle cx="121" cy="267" r="21" fill="url(#glow)"/>
+</svg>
